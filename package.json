@@ -1,0 +1,29 @@
+{
+    "author": "Karambola",
+    "dependencies": {},
+    "keywords": [],
+    "name": "wim-hof-timer",
+    "pebble": {
+        "capabilities": [
+            ""
+        ],
+        "displayName": "Wim Hof Timer",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "65b63ac0-3395-41d8-ab1f-9025bce5637c",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.5.0"
+}
