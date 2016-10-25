@@ -1,9 +1,9 @@
 /*
-   Project: Wim Hof timer (watchapp)
-   File   : main.c
-   Author : Afonso Santos, Portugal
+   WatchApp: Wim Hof timer
+   File    : main.c
+   Author  : Afonso Santos, Portugal
 
-   Last revision: 21h10 August 27 2016
+   Last revision: 25 October 2016
 */
 
 #include <pebble.h>
@@ -77,7 +77,7 @@ format_sec10th( char *result, const int n, const int pSec10th )
   }
     
   snprintf( dest, n-1, "%u.%u", sec10th/10, sec10th%10 ) ;
-  
+
   return result ;
 }
 
@@ -297,6 +297,7 @@ void
 window_load
 ( Window *s_window )
 {
+  // Create and configure the layers
   s_window_layer      = window_get_root_layer( s_window ) ;
   unobstructed_screen = layer_get_unobstructed_bounds( s_window_layer ).size ;
 
@@ -367,7 +368,7 @@ window_unload
 
 
 void
-app_init
+app_initialize
 ( void )
 {
   s_window = window_create( ) ;
@@ -385,7 +386,7 @@ app_init
 
 
 void
-app_deinit
+app_finalize
 ( void )
 {
   window_destroy( s_window ) ;
@@ -396,7 +397,7 @@ int
 main
 ( void )
 {
-  app_init( ) ;
+  app_initialize( ) ;
   app_event_loop( ) ;
-  app_deinit( ) ;
+  app_finalize( ) ;
 }
